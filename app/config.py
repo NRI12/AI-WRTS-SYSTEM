@@ -19,7 +19,7 @@ class Config:
     # Upload
     UPLOAD_FOLDER = 'static/uploads'
     MAX_CONTENT_LENGTH = 500 * 1024 * 1024  # 500MB
-    MAX_VIDEO_SIZE = 500 * 1024 * 1024  # 500MB for videos (updated for exam videos)
+    MAX_VIDEO_SIZE = 500 * 1024 * 1024
     ALLOWED_VIDEO_EXTENSIONS = {'mp4', 'avi', 'mov', 'mkv'}
     ALLOWED_IMAGE_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
     
