@@ -10,9 +10,13 @@ migrate = Migrate()
 csrf = CSRFProtect()
 
 
-def create_app():
+def create_app(config_class=None):
     app = Flask(__name__, template_folder='../templates', static_folder='../static')
-    app.config.from_object(Config)
+    # Use provided config or default Config
+    if config_class:
+        app.config.from_object(config_class)
+    else:
+        app.config.from_object(Config)
     
     # CSRF Configuration (uncomment để tắt CSRF tạm thời nếu cần debug)
     # app.config['WTF_CSRF_ENABLED'] = False
